@@ -1,0 +1,13 @@
+[Unit]
+Description=Start db Service
+After=networking.target
+
+[Service]
+Type=simple
+User=dme-p01
+WorkingDirectory=/home/dme-p01/DME-P1/db/
+Restart=always
+ExecStart=/home/dme-p01/DME-P1/db/venv/bin/python3 /home/dme-p01/DME-P1/db/load_db.py
+
+[Install]
+WantedBy=multi-user.target

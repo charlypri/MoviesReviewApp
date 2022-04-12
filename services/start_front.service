@@ -1,0 +1,14 @@
+[Unit]
+Description=Start server
+Requires=start_server.service
+After=start_server.service
+
+[Service]
+Type=simple
+User=dme-p01
+WorkingDirectory=/home/dme-p01/DME-P1/DME_P1/
+Restart=always
+ExecStart=cordova run browser
+
+[Install]
+WantedBy=multi-user.target

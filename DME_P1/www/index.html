@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+
+<head>
+    <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+    <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self' localhost:5002 https://fonts.googleapis.com https://fonts.gstatic.com">
+
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="viewport" content="initial-scale=1, width=device-width, viewport-fit=cover">
+    <link rel="icon" type=image/x-icon href="./img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@700&family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300&family=Carter+One&family=Oswald:wght@300&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>+Moviews</title>
+</head>
+
+<body>
+
+    <div class="cuerpo" id="cuerpo">
+        <div class="inicio">
+            <div id="box1">
+                <h1 id="brandName">+Moviews</h1>
+                <h2 id="placehold">Elige sobre que pelicula te gustaría saber</h3>
+                <div class="barraBusqueda">
+                    <div id="cover">
+                        <form >
+                          <div class="tb">
+                            <div class="td"><input type="text" placeholder="Search" id="campoBuscar" required></div>
+                            <div class="td" id="s-cover">
+                              <button id="botonBuscar">
+                                <div id="s-circle"></div>
+                                <span></span>
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                </div>
+            </div>
+            <hr>
+
+            <div class="sugerencias">
+                <div class="titlecontainer">
+                    <h1 id="brandName">Catálogo</h1>
+                </div>
+                
+                <div class="resultadosPelis">
+
+                </div>
+            </div>
+            
+        </div>
+        
+        <div class="mainPeli">
+            <div id="box2">
+                <h1 id="tituloPeli">
+
+                </h1>
+                <hr>
+                <div id="puntuaciones">
+                    <h2>Puntuación media: <b id="puntacionTotal">Esperando Puntuacion</b></h2>
+    
+                </div>
+                <button id="mostrarSpoilersB">Mostrar/ocultar spoilers</button>
+                <div class="zonaSpoilers">
+                    <div id="opiniones">
+                        <table id="opinionesTabla">
+                            <th>
+                                <h2>Opiniones de la gente</h2>
+                            </th>
+                        </table>
+                        <hr>
+                    </div>
+                    
+                    <div id="twitter">
+                        <table id="twitterTabla">
+                            <th>
+                                <h2>Opiniones de twitter</h2>
+                            </th>
+                            <tr>
+                                <td>
+                                    <table id="opP">
+                                        <th>
+                                            <h3>Opiniones positivas(<b id="porcP"></b>%)</h3>
+                                        </th>
+                                    </table>
+                                </td>
+    
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table id="opN">
+                                        <th>
+                                            <h3>Opiniones neutras(<b id="porcN"></b>%)</h3>
+                                        </th>
+                                    </table>
+                                </td>
+    
+                            </tr>
+                            <tr>
+                                <td>
+                                    <table id="opM">
+                                        <th>
+                                            <h3>Opiniones negativas(<b id="porcM"></b>%)</h3>
+                                        </th>
+                                    </table>
+                                </td>
+    
+                            </tr>
+    
+    
+    
+                        </table>
+                    </div>
+                </div>
+                <div class="but">
+                    <button id="big-button">Volver</button>
+                </div> 
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+    </footer>
+
+
+
+
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+
+
+
+</body>
+
+</html>

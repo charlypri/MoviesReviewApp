@@ -1,0 +1,13 @@
+[Unit]
+Description=Start server
+After=networking.target
+
+[Service]
+Type=simple
+User=dme-p01
+WorkingDirectory=/home/dme-p01/DME-P1/server/
+Restart=always
+ExecStart=/home/dme-p01/DME-P1/server/venv/bin/python3 /home/dme-p01/DME-P1/server/start_server.py
+
+[Install]
+WantedBy=multi-user.target
